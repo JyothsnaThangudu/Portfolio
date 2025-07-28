@@ -1,0 +1,804 @@
+.education {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.education-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 8s ease-in-out infinite;
+}
+
+.shape-1 {
+  width: 110px;
+  height: 110px;
+  background: rgba(255, 192, 203, 0.15);
+  top: 12%;
+  left: 12%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 140px;
+  height: 140px;
+  background: rgba(135, 206, 250, 0.15);
+  top: 22%;
+  right: 18%;
+  animation-delay: 1s;
+}
+
+.shape-3 {
+  width: 95px;
+  height: 95px;
+  background: rgba(152, 251, 152, 0.15);
+  top: 58%;
+  left: 22%;
+  animation-delay: 2s;
+}
+
+.shape-4 {
+  width: 125px;
+  height: 125px;
+  background: rgba(255, 165, 0, 0.15);
+  bottom: 22%;
+  right: 22%;
+  animation-delay: 3s;
+}
+
+.shape-5 {
+  width: 170px;
+  height: 170px;
+  background: rgba(216, 191, 216, 0.15);
+  bottom: 32%;
+  left: 18%;
+  animation-delay: 4s;
+}
+
+.shape-6 {
+  width: 85px;
+  height: 85px;
+  background: rgba(255, 228, 196, 0.15);
+  top: 42%;
+  right: 32%;
+  animation-delay: 5s;
+}
+
+.shape-7 {
+  width: 105px;
+  height: 105px;
+  background: rgba(175, 238, 238, 0.15);
+  top: 32%;
+  left: 38%;
+  animation-delay: 1.5s;
+}
+
+.shape-8 {
+  width: 155px;
+  height: 155px;
+  background: rgba(186, 85, 211, 0.15);
+  bottom: 12%;
+  right: 38%;
+  animation-delay: 2.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(180deg);
+  }
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ffd700, #ffed4e, #ffd700);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease infinite;
+  margin-bottom: 15px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.5px;
+  position: relative;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #f0f8ff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+}
+
+/* Education Visual Section */
+.education-visual {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-visual.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.education-image-container {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: educationCardFloat 8s ease-in-out infinite;
+}
+
+.education-image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.education-image-container:hover::before {
+  left: 100%;
+}
+
+.education-image-container:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes educationCardFloat {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotateX(1deg);
+  }
+}
+
+.education-stats {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #e8f0fe;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.education-illustration {
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Book Stack Animation */
+.book-stack {
+  position: relative;
+  margin-right: 40px;
+}
+
+.book {
+  width: 60px;
+  height: 8px;
+  border-radius: 4px;
+  position: absolute;
+  animation: bookFloat 4s ease-in-out infinite;
+}
+
+.book-1 {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  top: 0;
+  animation-delay: 0s;
+}
+
+.book-2 {
+  background: linear-gradient(45deg, #f093fb, #667eea);
+  top: 12px;
+  animation-delay: 0.5s;
+}
+
+.book-3 {
+  background: linear-gradient(45deg, #ffd700, #f093fb);
+  top: 24px;
+  animation-delay: 1s;
+}
+
+@keyframes bookFloat {
+  0%, 100% { transform: translateY(0) rotateZ(0deg); }
+  50% { transform: translateY(-5px) rotateZ(2deg); }
+}
+
+/* Graduation Cap */
+.graduation-cap {
+  position: relative;
+  margin-left: 40px;
+}
+
+.cap-top {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2d1b69, #667eea);
+  border-radius: 50%;
+  position: relative;
+  animation: capFloat 6s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(45, 27, 105, 0.3);
+}
+
+.cap-base {
+  width: 100px;
+  height: 6px;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  border-radius: 3px;
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  animation: capFloat 6s ease-in-out infinite 0.5s;
+}
+
+.tassel {
+  width: 3px;
+  height: 20px;
+  background: #ffd700;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  border-radius: 2px;
+  animation: tasselSway 3s ease-in-out infinite;
+}
+
+@keyframes capFloat {
+  0%, 100% { transform: translateY(0) rotateZ(0deg); }
+  50% { transform: translateY(-8px) rotateZ(-3deg); }
+}
+
+@keyframes tasselSway {
+  0%, 100% { transform: rotateZ(0deg); }
+  50% { transform: rotateZ(15deg); }
+}
+
+/* Academic Elements */
+.academic-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.element {
+  position: absolute;
+  font-size: 2rem;
+  animation: elementFloat 8s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+.element-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.element-2 {
+  top: 20%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.element-3 {
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 4s;
+}
+
+.element-4 {
+  bottom: 10%;
+  right: 20%;
+  animation-delay: 6s;
+}
+
+@keyframes elementFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(180deg, #667eea, #764ba2);
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 18px;
+  border-radius: 14px;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+  animation: educationFloat 6s ease-in-out infinite;
+  overflow: hidden;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.timeline-item:hover::before {
+  left: 100%;
+}
+
+.timeline-item:nth-child(odd) {
+  animation-delay: 0s;
+}
+
+.timeline-item:nth-child(even) {
+  animation-delay: 2s;
+}
+
+.timeline-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
+  margin-top: 6px;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+}
+
+.timeline-dot::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-year {
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes educationFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.education-degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f8f9fa;
+  margin-bottom: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.4;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.education-institution {
+  font-size: 0.95rem;
+  color: #e8f0fe;
+  font-weight: 400;
+  margin-bottom: 6px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.education-description {
+  font-size: 0.85rem;
+  color: #d0d7de;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 80px 0;
+  }
+  
+  .education-container {
+    padding: 0 20px;
+  }
+  
+  .education-item {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+  
+  .education-year {
+    min-width: auto;
+    align-self: flex-start;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .education-timeline {
+    gap: 30px;
+  }
+}
+
+.section-subtitle {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.section-subtitle.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-item {
+  opacity: 0;
+  transform: translateY(40px) scale(0.95);
+  animation-fill-mode: forwards;
+}
+
+.education-item.animate-in {
+  animation: educationItemIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes educationItemIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .education-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .education-visual {
+    order: 2;
+  }
+  
+  .education-timeline {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 50px 0;
+  }
+  
+  .education-container {
+    padding: 0 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .education-stats {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .stat-item {
+    min-width: 130px;
+    padding: 15px 20px;
+  }
+  
+  .stat-number {
+    font-size: 1.3rem;
+  }
+  
+  .education-illustration {
+    height: 150px;
+  }
+  
+  .element {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 40px 0;
+  }
+  
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item {
+    padding: 15px 12px;
+  }
+  
+  .education-degree {
+    font-size: 1rem;
+  }
+  
+  .education-institution {
+    font-size: 0.85rem;
+  }
+  
+  .education-description {
+    font-size: 0.85rem;
+  }
+}
+
+/* Simple Animation Enhancements */
+.section-title, .section-subtitle {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-title.animate-in, .section-subtitle.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-stats {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-stats.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.education-illustration {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-illustration.animate-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.element {
+  opacity: 0;
+  transform: translateY(20px) scale(0.8);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.element.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.education-timeline {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.education-timeline.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-year, .education-degree, .education-institution, .education-description {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-year.animate-in, 
+.education-degree.animate-in, 
+.education-institution.animate-in, 
+.education-description.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Hover enhancements */
+.timeline-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.education-image-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
