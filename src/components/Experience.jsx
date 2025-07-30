@@ -69,9 +69,9 @@ const Experience = () => {
   ];
 
   const achievements = [
+    'Semifinalist - Adobe GenSolve Hackathon conducted by GeeksforGeeks',
     'LeetCode Contest Rating: 1588',
     'Certified Smart Coder from SmartInterviews',
-    'Top 5% in AdobeGenSolve Hackathon by GeeksforGeeks',
     '1st Place - College-level Group Discussion competition',
     '1st Place - Zonal level Volleyball Tournament',
     'Oracle Certified: Java & DBMS'

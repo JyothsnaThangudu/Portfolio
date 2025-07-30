@@ -52,7 +52,7 @@ const Projects = () => {
       icon: '🏢',
       description: 'Contributing to backend development using Spring Boot and MySQL. Building scalable modules for payroll and user management in agile environment.',
       technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API', 'Git','React'],
-      codeLink: 'https://github.com/JyothsnaThangudu/Payflow-Project'
+      codeLink: 'https://github.com/JyothsnaThangudu/PayFlow'
     },
     {
       title: 'Online Testing System - Digital Assessment Platform',
