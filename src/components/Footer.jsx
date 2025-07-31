@@ -75,8 +75,8 @@ const Footer = () => {
           <div className={`footer-section ${isVisible ? 'animate-in' : ''}`} style={{ animationDelay: '0.5s' }}>
             <h4>Connect</h4>
             <div className="social-links">
-              <a href="https://github.com/jyothsna" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
-              <a href="https://linkedin.com/in/jyothsna-thangudu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="https://github.com/JyothsnaThangudu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://www.linkedin.com/in/jyothsna-thangudu-972135257/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
               </div>
           </div>
         </div>
