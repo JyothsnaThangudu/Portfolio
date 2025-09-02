@@ -32,6 +32,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'PayFlow AI - Enterprise Payroll System',
+      icon: '🏢',
+      description: 'Contributing to backend development using Spring Boot and MySQL. Building scalable modules for payroll and user management in agile environment.',
+      technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API', 'Git','React'],
+      demoLink: 'https://youtu.be/ON8TlaO5XC8',
+      codeLink: 'https://github.com/JyothsnaThangudu/PayFlow'
+    },
+    {
+      title: 'DataVista - Data-Driven Insights Platform',
+      icon: '📊',
+      description: 'Developed a full-stack data visualization platform with Django and React. Implemented secure authentication, CSV upload, and interactive charts to enhance data exploration and decision-making.',
+      technologies: ['Python', 'Django', 'React.js', 'PostgreSQL', 'REST API', 'Recharts', 'Git'],
+      demoLink: 'https://drive.google.com/file/d/1mA_kMN_mf0kYv6YMC0I-2ZoLwpVERzCS/view',
+      codeLink: 'https://github.com/JyothsnaThangudu/DataVista'
+    },
+    {
       title: 'AI-ChatMate - Intelligent Q&A Assistant',
       icon: '🧠',
       description: 'AI-powered Q&A chatbot using React and Gemini API with 95%+ accuracy and real-time responses under 1 second. Deployed on Vercel with 99.9% uptime.',
@@ -40,26 +56,19 @@ const Projects = () => {
       codeLink: 'https://github.com/JyothsnaThangudu/AI-Chatbot'
     },
     {
+      title: 'Online Testing System - Digital Assessment Platform',
+      icon: '🎓',
+      description: 'Full-stack testing platform with user registration, exam-taking, and performance analysis. Achieved 60% faster result processing with secure Django authentication.',
+      technologies: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
+      codeLink: 'https://github.com/JyothsnaThangudu/online-testing-system'
+    },
+    {
       title: 'Sorting Visualizer - Algorithm Learning Tool',
       icon: '🎯',
       description: 'Interactive visualization of 4+ sorting algorithms with animations and speed control, improving concept retention by 40% and reducing user confusion by 25%.',
       technologies: ['React', 'JavaScript', 'HTML', 'CSS', 'Algorithms'],
       demoLink: 'https://sort-itt-out.netlify.app/',
       codeLink: 'https://github.com/JyothsnaThangudu/Sort-it-Out'
-    },
-    {
-      title: 'PayFlow AI - Enterprise Payroll System',
-      icon: '🏢',
-      description: 'Contributing to backend development using Spring Boot and MySQL. Building scalable modules for payroll and user management in agile environment.',
-      technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API', 'Git','React'],
-      codeLink: 'https://github.com/JyothsnaThangudu/PayFlow'
-    },
-    {
-      title: 'Online Testing System - Digital Assessment Platform',
-      icon: '🎓',
-      description: 'Full-stack testing platform with user registration, exam-taking, and performance analysis. Achieved 60% faster result processing with secure Django authentication.',
-      technologies: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
-      codeLink: 'https://github.com/JyothsnaThangudu/online-testing-system'
     },
     {
       title: 'BiblioSEEK - Smart Library Management',
@@ -134,7 +143,7 @@ const Projects = () => {
                 <div className="project-links">
                   {project.demoLink && (
                     <a href={project.demoLink} className="project-link">
-                      🚀 Live
+                      🚀 Demo
                     </a>
                   )}
                   <a href={project.codeLink} className="project-link">

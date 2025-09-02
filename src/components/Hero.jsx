@@ -23,7 +23,7 @@ const Hero = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const roles = ['Software Developer', 'Problem Solver', 'Tech Enthusiast', 'Java Developer'];
+  const roles = ['Software Developer', 'Problem Solver', 'Tech Enthusiast'];
   const [currentRole, setCurrentRole] = useState(0);
 
   useEffect(() => {
@@ -92,10 +92,10 @@ const Hero = () => {
             </p>
             
             <div className="hero-stats">
-              <div className="stat-item">
+              {/* <div className="stat-item">
                 <span className="stat-number">1588</span>
                 <span className="stat-label">LeetCode Rating</span>
-              </div>
+              </div> */}
               <div className="stat-item">
                 <span className="stat-number">9.33</span>
                 <span className="stat-label">CGPA</span>
@@ -126,9 +126,9 @@ const Hero = () => {
               <a href="https://www.linkedin.com/in/jyothsna-thangudu-972135257/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fab fa-linkedin"></i>
               </a>
-              <a href="https://leetcode.com/u/Jyothsna_Thangudu/" target="_blank" rel="noopener noreferrer" className="social-link">
+              {/* <a href="https://leetcode.com/u/Jyothsna_Thangudu/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <i className="fas fa-code"></i>
-              </a>
+              </a> */}
             </div>
           </div>
           

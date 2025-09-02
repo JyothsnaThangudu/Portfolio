@@ -70,7 +70,7 @@ const Experience = () => {
 
   const achievements = [
     'Semifinalist - Adobe GenSolve Hackathon conducted by GeeksforGeeks',
-    'LeetCode Contest Rating: 1588',
+    'Solved 450+ algorithmic and data structure problems across different platforms',
     'Certified Smart Coder from SmartInterviews',
     '1st Place - College-level Group Discussion competition',
     '1st Place - Zonal level Volleyball Tournament',
